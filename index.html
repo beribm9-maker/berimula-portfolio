@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bereket Mulatu — Video Editor</title>
+  <meta name="description" content="Video editor portfolio — showreel, selected work, and contact." />
+
+  <!-- Google Font: Inter (clean, modern, readable at every size) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/My favicon image.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Thin progress bar that fills as the user scrolls down the page -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#home" class="nav__logo">
+        <img src="assets/images/profile.jpg" alt="Bereket Mulatu" class="nav__avatar" />
+        BEREKET<span class="nav__logo-thin">MULATU</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#home" class="nav__link active" data-nav>Home</a>
+        <a href="#work" class="nav__link" data-nav>Work</a>
+        <a href="#about" class="nav__link" data-nav>About</a>
+        <a href="#skills" class="nav__link" data-nav>Tools</a>
+        <a href="#contact" class="nav__link" data-nav>Contact</a>
+      </nav>
+
+      <a href="#contact" class="btn btn--small nav__cta">Hire me</a>
+
+      <button class="nav__burger" id="navBurger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Fullscreen mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" data-nav>Home</a>
+    <a href="#work" data-nav>Work</a>
+    <a href="#about" data-nav>About</a>
+    <a href="#skills" data-nav>Tools</a>
+    <a href="#contact" data-nav>Contact</a>
+  </div>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__filmstrip hero__filmstrip--top" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <p class="hero__tag reveal-word">
+          <span class="dot-blink"></span> Video Editor &amp; Motion Storyteller
+        </p>
+
+        <h1 class="hero__title">
+          <span class="reveal-line"><span class="reveal-word">I&nbsp;create</span> <span class="reveal-word">visuals</span></span>
+          <span class="reveal-line"><span class="reveal-word">that</span> <span class="reveal-word">make</span> <span class="reveal-word">your</span></span>
+          <span class="reveal-line"><span class="reveal-word reveal-word--accent">story matter.</span></span>
+        </h1>
+
+        <p class="hero__subtitle reveal-fade">
+          Based in Ethiopia, working with clients worldwide. I turn ideas and footage into clear,
+           engaging videos that connect with people.
+        </p>
+
+        <div class="hero__actions reveal-fade">
+          <a href="#work" class="btn btn--primary">Watch my work</a>
+          <a href="#contact" class="btn btn--ghost">Start a project</a>
+        </div>
+      </div>
+
+      <a href="#work" class="hero__scroll" aria-label="Scroll to work">
+        <span>Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ============ FEATURED SHOWREEL ============ -->
+    <section class="showreel container" id="showreel">
+      <div data-animate class="showreel__box">
+        <!--
+          REPLACE THIS: put your YouTube video ID between quotes below.
+          Example: if your reel URL is https://www.youtube.com/watch?v=ABC123XYZ
+          then the ID is: ABC123XYZ
+        -->
+        <div class="video-embed" data-video-id="Bnz_eFynT7o">
+          <img
+            class="video-embed__thumb"
+            src="https://img.youtube.com/vi/Bnz_eFynT7o/hqdefault.jpg"
+            alt="Showreel thumbnail"
+            onerror="this.parentElement.classList.add('video-embed--no-thumb')"
+          />
+          <button class="video-embed__play" aria-label="Play showreel">▶</button>
+        </div>
+      </div>
+      <p class="showreel__caption" data-animate>Kinetic Typography animation in After Effects </p>
+    </section>
+
+    <!-- ============ WORK / SELECTED PROJECTS ============ -->
+    <section class="work container" id="work">
+      <div class="section-head" data-animate>
+        <span class="section-head__eyebrow">Work</span>
+        <h2 class="section-head__title">Videos I&nbsp;edited</h2>
+        <p class="section-head__sub">
+          A mix of narrative, brand and social content. Click any card to play it right here.
+        </p>
+      </div>
+
+      <div class="work__grid" id="workGrid">
+        <!-- Cards are generated automatically from js/script.js -> videos array -->
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about container" id="about">
+      <div class="about__media" data-animate>
+        <img
+          src="assets/images/profile.jpg"
+          alt="Bereket Mulatu"
+          class="about__photo"
+        />
+        <div class="about__frame-tag">My Pic</div>
+      </div>
+
+      <div class="about__text" data-animate>
+        <span class="section-head__eyebrow">About</span>
+        <h2 class="section-head__title">Hi, I'm Bereket.</h2>
+        <p>
+           I'm helping creators tell compelling stories to their audiences.
+           I have a strong understanding of viewer psychology, which allows me to craft 
+           videos that hold attention and drive engagement. Through my career,
+           I've learned that simplicity is the key to powerful storytelling 
+           clean, focused edits communicate more than complexity ever can.
+        </p>
+        <p>
+          Whether it's a short-form video, or a YouTube series,
+          my job is: keep the viewer watching until the very last frame.
+        </p>
+
+
+      </div>
+    </section>
+
+    <!-- ============ SKILLS / TOOLS (marquee strip) ============ -->
+    <section class="skills" id="skills">
+      <div class="section-head container" data-animate>
+        <span class="section-head__eyebrow">Toolkit</span>
+        <h2 class="section-head__title">Software I edit&nbsp;with</h2>
+      </div>
+
+      <div class="marquee" aria-hidden="false">
+        <div class="marquee__track">
+          <span>Premiere Pro</span>
+          <span>After Effects</span>
+          <span>CapCut</span>
+          <span>Photoshop</span>
+          <span>Sound Design</span>
+          <span>Color Grading</span>
+          <span>Motion Graphics</span>
+          <!-- duplicated for a seamless infinite loop -->
+          <span>Premiere Pro</span>
+          <span>After Effects</span>
+          <span>CapCut</span>
+          <span>Photoshop</span>
+          <span>Sound Design</span>
+          <span>Color Grading</span>
+          <span>Motion Graphics</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact container" id="contact">
+      <div class="hero__filmstrip" aria-hidden="true"></div>
+
+      <div data-animate class="contact__inner">
+        <span class="section-head__eyebrow">Contact</span>
+        <h2 class="contact__title">Let's start something great together.</h2>
+
+        <!-- REPLACE: put your real email here -->
+        <a href="mailto:beribm9@gmail.com" class="contact__email">
+          beribm9@gmail.com
+        </a>
+
+        <div class="contact__socials">
+          <a href="tel:+251954594882" class="contact__phone">+251 954 594 882</a>
+          <a href="https://t.me/@Beri_BM" target="_blank" rel="noopener">Telegram</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Bereket Mulatu. All rights reserved.</p>
+      <button class="footer__top" id="toTop" aria-label="Back to top">↑ Top</button>
+    </div>
+  </footer>
+
+  <!-- ============ VIDEO LIGHTBOX (used by both showreel and work cards) ============ -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox__backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox__inner">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Close video">✕</button>
+      <div class="lightbox__frame" id="lightboxFrame"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
